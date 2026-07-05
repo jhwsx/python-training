@@ -24,7 +24,10 @@ print(max_value)
 各位数之和 = 2 + 3 + 4 = 9 
 结果 = 24 - 9 = 15
 """
-num = int(input('请输入一个正整数：'))
+num_str = input('请输入一个正整数：')
+# 判定是不是正整数
+# if not num_str.isdigit() or not int(num_str):
+num = int(num_str)
 # 计算有多少位数字
 digits = 1
 num_copy = num
@@ -70,6 +73,24 @@ for elem in lst:
         summ += elem
 print(summ)
 
+summ = 0
+num_type = (int, float, bool, complex)
+for k, v in d.items():
+    if type(k) in num_type:
+        summ += k
+    if type(v) in num_type:
+        summ += v
+print(summ)
+
+summ = 0
+num_type = (int, float, bool, complex)
+for k in d:
+    v = d[k]
+    if type(k) in num_type:
+        summ += k
+    if type(v) in num_type:
+        summ += v
+print(summ)
 """
 定义函数实现：
 函数传入一个整数列表nums，把该列表中的偶数变成平方值，奇数保持原值。
