@@ -70,5 +70,6 @@ class SportsStudent(Sportsman, Student):
 
 
 ss = SportsStudent()
+ss.eat()
 super(SportsStudent, ss).eat()
 super(Sportsman, ss).eat()

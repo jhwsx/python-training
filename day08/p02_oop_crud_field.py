@@ -1,7 +1,7 @@
 class Student(object):
     # 类属性
     school = 'hpu'
-    # Student.school2 = 'hpu'  # Error
+    # Student.school2 = 'hpu'  # NameError: name 'Student' is not defined
 
     def __init__(self, name, age, grade):  # 这里覆盖了 object 类中的 __init__ 方法
         # 实例属性
